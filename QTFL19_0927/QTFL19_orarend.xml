@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QTFL19_orarend>
+	<ora id="1" tipus="eloadas">
+		<targy nev="ValSzam"></targy>
+		<idopont>
+			<nap napn="Hétfő"></nap>
+			<tol tolt="10:00"></tol>
+			<ig igt="12:00"></ig>
+		</idopont>
+		<helyszin hol="A1 320"></helyszin>
+		<oktato neve="Dr. Fegyverneki Sándor"></oktato>
+		<szak sznev="programtervezoi"></szak>
+	</ora>
+	
+	<ora id="2" tipus="eloadas">
+		<targy nev="Adatkezelés XML-ben"></targy>
+		<idopont>
+			<nap napn="Kedd"></nap>
+			<tol tolt="12:00"></tol>
+			<ig igt="14:00"></ig>
+		</idopont>
+		<helyszin hol="A1 32"></helyszin>
+		<oktato neve="Dr. Bednarik László"></oktato>
+		<szak sznev="programtervezoi"></szak>
+	</ora>
+	
+	<ora id="3" tipus="eloadas">
+		<targy nev="Mesterséges Intelligencia"></targy>
+		<idopont>
+			<nap napn="Kedd"></nap>
+			<tol tolt="10:00"></tol>
+			<ig igt="12:00"></ig>
+		</idopont>
+		<helyszin hol="A1 32"></helyszin>
+		<oktato neve="Dr Kunné Tamási Judit"></oktato>
+		<szak sznev="programtervezoi"></szak>
+	</ora>
+	
+	
+	<ora id="4" tipus="gyakorlat">
+		<targy nev="ValSzam"></targy>
+		<idopont>
+			<nap napn="Kedd"></nap>
+			<tol tolt="12:00"></tol>
+			<ig igt="14:00"></ig>
+		</idopont>
+		<helyszin hol="C1 101"></helyszin>
+		<oktato neve="Dr. Fegyverneki Sándor"></oktato>
+		<szak sznev="programtervezoi"></szak>
+	</ora>
+	
+	
+	<ora id="5" tipus="gyakorlat">
+		<targy nev="Adatkezelés XML-ben"></targy>
+		<idopont>
+			<nap napn="Szerda"></nap>
+			<tol tolt="12:00"></tol>
+			<ig igt="14:00"></ig>
+		</idopont>
+		<helyszin hol="Inf 103"></helyszin>
+		<oktato neve="Dr. Bednarik László"></oktato>
+		<szak sznev="programtervezoi"></szak>
+	</ora>
+	
+	<ora id="6" tipus="gyakorlat">
+		<targy nev="Mesterséges Intelligencia"></targy>
+		<idopont>
+			<nap napn="Csütörtök"></nap>
+			<tol tolt="10:00"></tol>
+			<ig igt="12:00"></ig>
+		</idopont>
+		<helyszin hol="A2 1"></helyszin>
+		<oktato neve="Fazekas Levente"></oktato>
+		<szak sznev="programtervezoi"></szak>
+	</ora>
+</QTFL19_orarend>
+	

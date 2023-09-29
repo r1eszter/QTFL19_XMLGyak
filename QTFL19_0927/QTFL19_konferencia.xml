@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konferencia>
+    <cim id="1">Adatkezelés XML-ben</cim>
+    <hallgatok id="2">
+    
+        <hallgato>
+            <nev>Rontó Eszter</nev>
+            <lakcim>3434 Mályi, Deák Ferenc utca</lakcim>
+        </hallgato>
+
+        <hallgato>
+            <nev>Súkeník Erik</nev>
+            <lakcim>3532 Miskolc, Győri kapu</lakcim>
+        </hallgato>
+
+    </hallgatok>
+    <helyszin id="3">32 előadó</helyszin>
+    <eloado id="4">
+        <nev>Dr Bednarik László</nev>
+        <adoszam></adoszam>
+        <lakcim></lakcim>
+    </eloado>
+    <datum id="5">2023. szeptember 27.</datum>
+</konferencia>
