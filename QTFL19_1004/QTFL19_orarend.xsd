@@ -1,0 +1,75 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="targy" type="xs:string" />
+    <xs:element name="nap" type="napTipus" />
+    <xs:element name="tol" type="idoTipus" />
+    <xs:element name="ig" type="idoTipus" />
+    <xs:element name="helyszin" type="xs:string" />
+    <xs:element name="oktato" type="xs:string" />
+    <xs:element name="szak" type="szakTipus" />
+
+    <xs:simpleType name="EloadasGyakorlatTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="eloadas" />
+            <xs:enumeration value="gyakoralt" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idTipus">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1" />
+            <xs:maxLength value="2" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="szakTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="programtervezoi" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="napTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hétfő" />
+            <xs:enumeration value="Kedd" />
+            <xs:enumeration value="Szerda" />
+            <xs:enumeration value="Csütörtök" />
+            <xs:enumeration value="Péntek" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idoTipus">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-2][0-9]:[0-5][0-9]" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="QTFL19_orarend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ora" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:all>
+                            <xs:element ref="targy" />
+                            <xs:element name="idopont" minOccurs="1">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="nap" />
+                                        <xs:element ref="tol" />
+                                        <xs:element ref="ig" />
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element ref="helyszin" />
+                            <xs:element ref="oktato" />
+                            <xs:element ref="szak" />
+                        </xs:all>
+                        <xs:attribute name="id" type="idTipus" />
+                        <xs:attribute name="tipus" type="EloadasGyakorlatTipus"></xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
