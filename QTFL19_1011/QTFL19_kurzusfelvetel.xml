@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<QTFL19_kurzusfelvetel tanev="2023/24" egyetem="ME">
+
+    <hallgato>
+        <hnev>Rontó Eszter</hnev>
+        <szulev>2001.08.23</szulev>
+        <szak evf="4">programtervező</szak>
+    </hallgato>
+
+    <kurzusok>
+        <kurzus id="GEIAL332-B">
+            <kurzusnev>Adatkezelés XML-ben</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1 32.előadó</hely>
+            <idopont>Kedd 12-14</idopont>
+            <oktato>Dr. Bednarik László</oktato>
+        </kurzus>
+
+        <kurzus id="GEMAK232-B">
+            <kurzusnev>Valószínűségszámítás</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1 33.előadó</hely>
+            <idopont>Hétfő 10-12</idopont>
+            <oktato>Dr. Fegyverneki Sándor</oktato>
+        </kurzus>
+
+        <kurzus id="GEIAK130-B">
+            <kurzusnev>Mesterséges Intelligencia</kurzusnev>
+            <kredit>5</kredit>
+            <hely>A1 32.előadó</hely>
+            <idopont>Kedd 10-12</idopont>
+            <oktato>Kunné Dr. Tamás Judit</oktato>
+            <oraado>Fazekas Levente</oraado>
+        </kurzus>
+    </kurzusok>
+
+
+</QTFL19_kurzusfelvetel>
