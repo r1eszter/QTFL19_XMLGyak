@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fesztivalozas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="XMLSchemaQTFL19.xsd">
+
+    <!-- Fesztivál -->
+    <fesztival fesz_id="f1">
+        <nev>Burning Man</nev>
+        <helyszin>Black Rock Desert, Nevada</helyszin>
+        <ev>2023</ev>
+    </fesztival>
+
+    <fesztival fesz_id="f2">
+        <nev>Sziget Fesztivál</nev>
+        <helyszin>Budapest</helyszin>
+        <ev>2023</ev>
+    </fesztival>
+
+
+    <!-- Tulajdonos -->
+    <tulajdonos t_id="t1" fesz_t="f1">
+        <nev>Tóth Tamás Péter</nev>
+        <adoszam>12345678-0-33</adoszam>
+        <alapitas>1986</alapitas>
+        <bevetel>300.000.000.000.000</bevetel>
+    </tulajdonos>
+
+    <tulajdonos t_id="t1" fesz_t="f1">
+        <nev>Súkeník Erik</nev>
+        <adoszam>87654321-5-06</adoszam>
+        <alapitas>2012</alapitas>
+        <bevetel>24.000.000</bevetel>
+    </tulajdonos>
+
+
+    <!-- Fellépő -->
+    <fellepo fel_id="e1" fel_fesz="f1">
+        <nev>Post Malone</nev>
+        <orszag>USA</orszag>
+        <dij>Best Rapper</dij>
+    </fellepo>
+
+    <fellepo fel_id="e2" fel_fesz="f1">
+        <nev>Gorillaz</nev>
+        <orszag>USA</orszag>
+        <dij>Best Band</dij>
+    </fellepo>
+
+    <fellepo fel_id="e3" fel_fesz="f2">
+        <nev>Azahriah</nev>
+        <orszag>Magyarorszag</orszag>
+        <dij>Legjobb Dalszerző</dij>
+    </fellepo>
+
+
+    <!-- Bár -->
+    <bar b_id="b1" fesz_b="f1">
+        <nev>Burning Cocktails</nev>
+        <ital>Zombie</ital>
+        <ital>Shirley Temple</ital>
+        <ceg>Cocktail Ltd.</ceg>
+    </bar>
+
+    <bar b_id="b2" fesz_b="f2">
+        <nev>Unikornis</nev>
+        <ital>Mojito</ital>
+        <ital>Margarita</ital>
+        <ceg>Szikra Kft.</ceg>
+    </bar>
+
+
+    <!-- Alkalmazott -->
+    <alkalmazott a_id="a1" b_a="b1">
+        <nev>Nagy Máté</nev>
+        <muszak>Hetfo 15:00 - Kedd 03:00</muszak>
+        <muszak>Szerda 18:00 - Csutortok 02:00</muszak>
+        <muszak>Szombat 15:00 - Vasarnap 03:00</muszak>
+        <fizetes>5500/h</fizetes>
+    </alkalmazott>
+
+    <alkalmazott a_id="a2" b_a="b2">
+        <nev>Énekes Zoltán</nev>
+        <muszak>Hetfo 8:00 - Hetfo 20:00</muszak>
+        <muszak>Szerda 20:00 - Csutortok 05:00</muszak>
+        <muszak>Pentek 15:00 - Szombat 03:00</muszak>
+        <fizetes>3500/h</fizetes>
+    </alkalmazott>
+
+
+    <!-- Résztvevő -->
+    <resztvevo r_id="r1" fesz_r="f1">
+        <nev>Rontó Eszter</nev>
+        <diakigazolvany>71523648975</diakigazolvany>
+        <lakcim>
+            <telepules>Malyi</telepules>
+            <utca>Deak Ferenc</utca>
+            <hazszam>35</hazszam>
+        </lakcim>
+    </resztvevo>
+
+    <resztvevo r_id="r2" fesz_r="f2">
+        <nev>Kolláth Bence</nev>
+        <diakigazolvany>75683249647</diakigazolvany>
+        <lakcim>
+            <telepules>Miskolc</telepules>
+            <utca>Görgey Artúr</utca>
+            <hazszam>82 3/4</hazszam>
+        </lakcim>
+    </resztvevo>
+
+    <resztvevo r_id="r3" fesz_r="f2">
+        <nev>Molnár Mátyás</nev>
+        <diakigazolvany>79654785214</diakigazolvany>
+        <lakcim>
+            <telepules>Miskolc</telepules>
+            <utca>Kisfaludy Károly</utca>
+            <hazszam>17 9/1</hazszam>
+        </lakcim>
+    </resztvevo>
+
+
+    <!-- Nyelvtudas -->
+    <nyelvtudas ny_id="ny1">
+        <nyelv>Japan</nyelv>
+        <szint>alap</szint>
+    </nyelvtudas>
+
+    <nyelvtudas ny_id="ny2">
+        <nyelv>Angol</nyelv>
+        <szint>kozep</szint>
+    </nyelvtudas>
+
+    <nyelvtudas ny_id="ny3">
+        <nyelv>Nemet</nyelv>
+        <szint>kozep</szint>
+    </nyelvtudas>
+
+
+    <!-- Közvélemény -->
+    <kozvelemeny k_id="k1" r_id="r1" ny_id="ny1">
+        <kerdezo>László Andrea</kerdezo>
+    </kozvelemeny>
+
+    <kozvelemeny k_id="k1" r_id="r2" ny_id="ny2">
+        <kerdezo>László Andrea</kerdezo>
+    </kozvelemeny>
+
+    <kozvelemeny k_id="k2" r_id="r3" ny_id="ny3">
+        <kerdezo>Garamszegi Márton</kerdezo>
+    </kozvelemeny>
+
+</fesztivalozas>
