@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<QTFL19_kurzusfelvetel tanev="2023/2024" egyetem="ME">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<QTFL19_kurzusfelvetel egyetem="ME" tanev="2023/2024">
 
     <hallgato id="QTFL19">
         <hnev>Rontó Eszter</hnev>
@@ -15,6 +14,7 @@
             <hely>A1 32.előadó</hely>
             <idopont>Kedd 12-14</idopont>
             <oktato>Dr. Bednarik László</oktato>
+            <oraado>Agárdi Anita</oraado>
         </kurzus>
 
         <kurzus id="GEMAK232-B">
@@ -23,9 +23,10 @@
             <hely>A1 33.előadó</hely>
             <idopont>Hétfő 10-12</idopont>
             <oktato>Dr. Fegyverneki Sándor</oktato>
+            <oraado>Agárdi Anita</oraado>
         </kurzus>
 
-        <kurzus id="GEIAK130-B" nyelv="angol">
+        <kurzus id="GEIAK130-B" nyelv="német">
             <kurzusnev>Mesterséges Intelligencia</kurzusnev>
             <kredit>5</kredit>
             <hely>A1 32.előadó</hely>

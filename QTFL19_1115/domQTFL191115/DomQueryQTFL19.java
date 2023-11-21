@@ -29,11 +29,13 @@ public class DomQueryQTFL19 {
         try {
             File inputFile = new File("kurzusfelvetelQTFL19.xml");
 
-            
+
             /* kurzus */
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-            Document doc = dBuilder.parse(inputFile);
+            DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
+			DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
+
+            Document doc = documentBuilder.parse(inputFile);
+
             doc.getDocumentElement().normalize();
             NodeList kurzusNodeList = doc.getElementsByTagName("kurzusnev");
             System.out.print("Kurzusnév : [ ");
@@ -54,7 +56,7 @@ public class DomQueryQTFL19 {
             /* hallgato */
             NodeList hallgatoNodeList = doc.getElementsByTagName("hallgato");
 
-            Document newDoc = dBuilder.newDocument();
+            Document newDoc = documentBuilder.newDocument();
             Element rootElement = newDoc.createElement("hallgatok");            
             newDoc.appendChild(rootElement);
 
