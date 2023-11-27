@@ -1,0 +1,32 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+<xs:simpleType name="idTipus">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="3" />
+            <xs:maxLength value="10" />
+        </xs:restriction>
+</xs:simpleType>
+
+
+<xs:element name="class">
+    <xs:complexType>
+            <xs:sequence>
+                <xs:element name="student" />
+            </xs:sequence>
+        </xs:complexType>
+</xs:element>
+
+<xs:element name="student">
+    <xs:complexType>
+            <xs:all>
+                <xs:element name="keresztnev" type="xs:string" />
+                <xs:element name="vezeteknev" type="xs:string" />
+                <xs:element name="becenev" type="xs:string">
+                <xs:element name="kor" type="xs:integer">
+                </xs:element>
+            </xs:all>
+            <xs:attribute name="id" type="idTipus" use="required" />
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>
