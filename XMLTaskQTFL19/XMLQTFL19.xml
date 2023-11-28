@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<konyvesvasarlas xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" xs:noNamespaceSchemaLocation="XMLSchemaQTFL19.xsd">
+
+
+
+<!-- Könyvesbolt -->
+<!-- Könyvesbolt "lánc" neve : LAP -->
+<konyvesbolt KB_ID="kb1">
+    <nev>LAPos</nev>
+    <elerhetoseg>
+        <email>lapos@gmail.com</email>
+        <telefon>06305984652</telefon>
+    </elerhetoseg>
+    <kapacitas>19.020</kapacitas>
+</konyvesbolt>
+
+<konyvesbolt KB_ID="kb2">
+    <nev>aLAP</nev>
+    <elerhetoseg>
+        <email>alap@freemail.hu</email>
+        <telefon>06201523495</telefon>
+    </elerhetoseg>
+    <kapacitas>45.000</kapacitas>
+</konyvesbolt>
+
+<konyvesbolt KB_ID="kb3">
+    <nev>LAPoz</nev>
+    <elerhetoseg>
+        <email>lapoz@gmail.hu</email>
+        <telefon>06708623562</telefon>
+    </elerhetoseg>
+    <kapacitas>20.900</kapacitas>
+</konyvesbolt>
+
+
+
+<!-- Könyv -->
+<konyv K_ID="k1">
+    <cim>Oppa és Yeobo</cim>
+    <mufaj>dráma</mufaj>
+    <mufaj>romantikus</mufaj>
+    <mufaj>komédia</mufaj>
+    <iro>Tóth Péter Tamás</iro>
+</konyv>
+
+<konyv K_ID="k2">
+    <cim>Bankrablás</cim>
+    <mufaj>thriller</mufaj>
+    <mufaj>krimi</mufaj>
+    <mufaj>akció</mufaj>
+    <iro>Szabó János</iro>
+</konyv>
+
+<konyv K_ID="k3">
+    <cim>Shuriken</cim>
+    <mufaj>akció</mufaj>
+    <mufaj>tragédia</mufaj>
+    <mufaj>kalandregény</mufaj>
+    <iro>Bogyó Eszter</iro>
+</konyv>
+
+<konyv K_ID="k4">
+    <cim>Egyetem</cim>
+    <mufaj>thriller</mufaj>
+    <mufaj>horror</mufaj>
+    <iro>Garamszegi Márton</iro>
+</konyv>
+
+
+
+<!-- Kiadó -->
+<kiado Adoszam="1234567895">
+    <nev>Pub</nev>
+    <alapitas>1980.10.21</alapitas>
+    <hely>California</hely>
+</kiado>
+
+<kiado Adoszam="4578623598">
+    <nev>Money</nev>
+    <alapitas>2005.09.13</alapitas>
+    <hely>Bikinifenék</hely>
+</kiado>
+
+<kiado Adoszam="1452368952">
+    <nev>OneTrickPony</nev>
+    <alapitas>2010.02.30</alapitas>
+    <hely>New York</hely>
+</kiado>
+
+<kiado Adoszam="4982332959">
+    <nev>KiAD</nev>
+    <alapitas>1996.05.19</alapitas>
+    <hely>Budapest</hely>
+</kiado>
+
+
+
+<!-- Vásárló -->
+<vasarlo V_ID="v1">
+    <nev>Súkeník Erik</nev>
+    <iranyitoszam>8596</iranyitoszam>
+    <email>EriKing@gmail.com</email>
+</vasarlo>
+
+<vasarlo V_ID="v2">
+    <nev>Szabó Dávid</nev>
+    <iranyitoszam>1045</iranyitoszam>
+    <email>distrect@citromail.hu</email>
+</vasarlo>
+
+<vasarlo V_ID="v3">
+    <nev>Magyar János</nev>
+    <iranyitoszam>1139</iranyitoszam>
+    <email>makkos98@outlook.hu</email>
+</vasarlo>
+
+<vasarlo V_ID="v4">
+    <nev>Bogyó Márta</nev>
+    <iranyitoszam>9562</iranyitoszam>
+    <email>bogyo@gmail.com</email>
+</vasarlo>
+
+<vasarlo V_ID="v5">
+    <nev>Morty Smith</nev>
+    <iranyitoszam>6243</iranyitoszam>
+    <email>smith@gmail.com</email>
+</vasarlo>
+
+
+
+<!-- Kártya -->
+<kartya vonalkod="45236874">
+    <tipus>Törzsvársálói</tipus>
+    <akcio>15</akcio>
+    <igenyles>2015.04.28</igenyles>
+</kartya>
+
+<kartya vonalkod="15632982">
+    <tipus>Törzsvársálói</tipus>
+    <akcio>90</akcio>
+    <igenyles>1980.09.10</igenyles>
+</kartya>
+
+<kartya vonalkod="65369848">
+    <tipus>Ajándék</tipus>
+    <akcio>30</akcio>
+    <igenyles>2020.12.20</igenyles>
+</kartya>
+
+<kartya vonalkod="53248725">
+    <tipus>Törzsvársálói</tipus>
+    <akcio>30</akcio>
+    <igenyles>1998.06.20</igenyles>
+</kartya>
+
+<kartya vonalkod="35986147">
+    <tipus>Ajándék</tipus>
+    <akcio>30</akcio>
+    <igenyles>2023.08.02</igenyles>
+</kartya>
+
+
+
+<!-- Vétel kapcsolat -->
+<vetel KB_ID="kb1" V_ID="v3">
+    <vasarlas>2018.11.04</vasarlas>
+</vetel>
+
+<vetel KB_ID="kb2" V_ID="v1">
+    <vasarlas>2022.03.15</vasarlas>
+</vetel>
+
+<vetel KB_ID="kb3" V_ID="v2">
+    <vasarlas>2023.08.06</vasarlas>
+</vetel>
+
+<vetel KB_ID="kb2" V_ID="v4">
+    <vasarlas>2023.04.23</vasarlas>
+</vetel>
+
+<vetel KB_ID="kb1" V_ID="v5">
+    <vasarlas>2020.10.08</vasarlas>
+</vetel>
+
+<vetel KB_ID="kb3" V_ID="v4">
+    <vasarlas>2021.07.10</vasarlas>
+</vetel>
+
+
+</konyvesvasarlas>
