@@ -1,0 +1,210 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <!-- Egyszerű Elemek -->
+
+    <!-- könyvesbolt elemek -->
+    <xs:element name="nev" type="xs:string"/>
+    <xs:element name="email" type="xs:emailType"/>
+    <xs:element name="telefon" type="xs:int"/>
+    <xs:element name="kapacitas" type="xs:kapType"/>
+
+    <!-- könyv elemek -->
+    <xs:element name="cim" type="xs:string"/>
+    <xs:element name="mufaj" type="xs:string"/>
+    <xs:element name="iro" type="xs:string"/>
+
+    <!-- kiadó elemek  -->
+    <xs:element name="alapitas" type="xs:dateType"/>
+    <xs:element name="hely" type="xs:string"/>
+
+    <!-- vásárló elemek -->
+    <xs:element name="iranyitoszam" type="xs:iranyType"/>
+
+    <!-- kártya elemek -->
+    <xs:element name="tipus" type="xs:string"/>
+    <xs:element name="akcio" type="xs:int"/>
+    <xs:element name="igenyles" type="xs:dateType"/>
+
+    <!-- vétel kapcsolat eleme -->
+    <xs:element name="vasarlas" type="xs:dateType"/>
+
+
+
+    <!-- Saját Típusok -->
+    <xs:simpleType name="emailType"/>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+"/>
+        <xs:restriction/>
+    <xs:simpleType/>
+
+    <xs:simpleType name="iranyType"/>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9][0-9][0-9]"/>
+        <xs:restriction/>
+    <xs:simpleType/>
+
+    <xs:simpleType name="kapType"/>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9][0-9].[0-9][0-9][0-9]"/>
+        <xs:restriction/>
+    <xs:simpleType/>
+
+    <xs:simpleType name="dateType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([12]\d{3}.(0[1-9]|1[0-2]).(0[1-9]|[12]\d|3[01]))" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    
+    <!-- Felépítés -->
+    <xs:element name="konyvesvasarlas">
+        <xs:complexType>
+            <xs:sequence>
+
+                <!-- könyvesbolt -->
+                <xs:element name="konyvesbolt" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="nev"/>
+                            <xs:element name="elerhetoseg">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element ref="email"/>
+                                        <xs:element ref="telefon"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element ref="kapacitas"/>
+                        </xs:sequence>
+                        <xs:attribute name="KB_ID" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- könyv -->
+                <xs:element name="konyv" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="cim"/>
+                            <xs:element ref="mufaj" minOccurs="1" maxOccurs="unbounded"/>
+                            <xs:element ref="iro"/>
+                        <xs:sequence>
+                        <xs:attribute name="K_ID" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- kiadó -->
+                <xs:element name="kiado" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="nev"/>
+                            <xs:element ref="alapitas"/>
+                            <xs:element ref="hely"/>
+                        </xs:sequence>
+                        <xs:attribute name="Adoszam" type="xs:int"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- vásárló -->
+                <xs:element name="vasarlo" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="nev"/>
+                            <xs:element ref="iranyitoszam"/>
+                            <xs:element ref="email"/>
+                        </xs:sequence>
+                        <xs:attribute name="V_ID" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- kártya -->
+                <xs:element name="kartya" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="tipus"/>
+                            <xs:element ref="akcio"/>
+                            <xs:element ref="igenyles"/>
+                        </xs:sequence>
+                        <xs:attribute name="vonalkod" type="xs:int"/>
+                    </xs:complexType>
+                </xs:element>
+
+                <!-- vétel kapcsolat -->
+                <xs:element name="vetel" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element ref="vasarlas"/>
+                        </xs:sequence>
+                        <xs:attribute name="KB_ID" type="xs:string"/>
+                        <xs:attribute name="V_ID" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            
+            </xs:sequence>
+        </xs:complexType>
+    
+
+
+
+        <!--Kulcsok-->
+        <xs:key name="konyvesbolt_kulcs">
+            <xs:selector xpath="konyvesbolt"/>
+            <xs:field xpath="@KB_ID"/>
+        </xs:key>
+        
+        <xs:key name="konyv_kulcs">
+            <xs:selector xpath="konyv"/>
+            <xs:field xpath="@K_ID"/>
+        </xs:key>
+
+        <xs:key name="kiado_kulcs">
+            <xs:selector xpath="kiado"/>
+            <xs:field xpath="@Adoszam"/>
+        </xs:key>
+
+        <xs:key name="vasarlo_kulcs">
+            <xs:selector xpath="vasarlo"/>
+            <xs:field xpath="@V_ID"/>
+        </xs:key>
+
+        <xs:key name="kartya_kulcs">
+            <xs:selector xpath="kartya"/>
+            <xs:field xpath="@vonalkod"/>
+        </xs:key>
+
+
+
+        <!-- Idegen kulcsok -->
+        <xs:keyref refer="konyvesbolt_kulcs" name="konyvesbolt_idegen_kulcs">
+            <xs:selector xpath="konyv"/>
+            <xs:field xpath="@FK_bolt"/>
+        </xs:keyref>
+
+        <xs:keyref refer="konyv_kulcs" name="konyv_idegen_kulcs">
+            <xs:selector xpath="kiado"/>
+            <xs:field xpath="@FK_konyv"/>
+        </xs:keyref>
+
+        <xs:keyref refer="konyvesbolt_kulcs" name="vetel_konyvesbolt_idegen_kulcs">
+            <xs:selector xpath="vetel"/>
+            <xs:field xpath="@KB_ID"/>
+        </xs:keyref>
+
+        <xs:keyref refer="vasarlo_kulcs" name="vetel_vasarlo_idegen_kulcs">
+            <xs:selector xpath="vetel"/>
+            <xs:field xpath="@V_ID"/>
+        </xs:keyref>
+
+
+
+        <!-- 1:1 -->
+        <xs:unique name="unique_kartya">
+            <xs:selector xpath="kartya"/>
+            <xs:field xpath="@FK_vendeg"/>
+        </xs:unique>
+
+    </xs:element>
+
+</xs:schema>
+
+

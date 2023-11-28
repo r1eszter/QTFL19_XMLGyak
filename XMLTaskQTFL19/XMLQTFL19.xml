@@ -36,7 +36,7 @@
 
 
 <!-- Könyv -->
-<konyv K_ID="k1">
+<konyv K_ID="k1" FK_bolt="kb3">
     <cim>Oppa és Yeobo</cim>
     <mufaj>dráma</mufaj>
     <mufaj>romantikus</mufaj>
@@ -44,7 +44,7 @@
     <iro>Tóth Péter Tamás</iro>
 </konyv>
 
-<konyv K_ID="k2">
+<konyv K_ID="k2" FK_bolt="kb3">
     <cim>Bankrablás</cim>
     <mufaj>thriller</mufaj>
     <mufaj>krimi</mufaj>
@@ -52,7 +52,7 @@
     <iro>Szabó János</iro>
 </konyv>
 
-<konyv K_ID="k3">
+<konyv K_ID="k3" FK_bolt="kb2">
     <cim>Shuriken</cim>
     <mufaj>akció</mufaj>
     <mufaj>tragédia</mufaj>
@@ -60,7 +60,7 @@
     <iro>Bogyó Eszter</iro>
 </konyv>
 
-<konyv K_ID="k4">
+<konyv K_ID="k4" FK_bolt="kb1">
     <cim>Egyetem</cim>
     <mufaj>thriller</mufaj>
     <mufaj>horror</mufaj>
@@ -70,25 +70,25 @@
 
 
 <!-- Kiadó -->
-<kiado Adoszam="1234567895">
+<kiado Adoszam="1234567895" FK_konyv="k3">
     <nev>Pub</nev>
     <alapitas>1980.10.21</alapitas>
     <hely>California</hely>
 </kiado>
 
-<kiado Adoszam="4578623598">
+<kiado Adoszam="4578623598" FK_konyv="k1">
     <nev>Money</nev>
     <alapitas>2005.09.13</alapitas>
     <hely>Bikinifenék</hely>
 </kiado>
 
-<kiado Adoszam="1452368952">
+<kiado Adoszam="1452368952" FK_konyv="k4">
     <nev>OneTrickPony</nev>
     <alapitas>2010.02.30</alapitas>
     <hely>New York</hely>
 </kiado>
 
-<kiado Adoszam="4982332959">
+<kiado Adoszam="4982332959" FK_konyv="k2">
     <nev>KiAD</nev>
     <alapitas>1996.05.19</alapitas>
     <hely>Budapest</hely>
@@ -130,31 +130,31 @@
 
 
 <!-- Kártya -->
-<kartya vonalkod="45236874">
+<kartya vonalkod="45236874" FK_vendeg="v1">
     <tipus>Törzsvársálói</tipus>
     <akcio>15</akcio>
     <igenyles>2015.04.28</igenyles>
 </kartya>
 
-<kartya vonalkod="15632982">
+<kartya vonalkod="15632982" FK_vendeg="v2">
     <tipus>Törzsvársálói</tipus>
     <akcio>90</akcio>
     <igenyles>1980.09.10</igenyles>
 </kartya>
 
-<kartya vonalkod="65369848">
+<kartya vonalkod="65369848" FK_vendeg="v5">
     <tipus>Ajándék</tipus>
     <akcio>30</akcio>
     <igenyles>2020.12.20</igenyles>
 </kartya>
 
-<kartya vonalkod="53248725">
+<kartya vonalkod="53248725" FK_vendeg="v4">
     <tipus>Törzsvársálói</tipus>
     <akcio>30</akcio>
     <igenyles>1998.06.20</igenyles>
 </kartya>
 
-<kartya vonalkod="35986147">
+<kartya vonalkod="35986147" FK_vendeg="v3">
     <tipus>Ajándék</tipus>
     <akcio>30</akcio>
     <igenyles>2023.08.02</igenyles>
