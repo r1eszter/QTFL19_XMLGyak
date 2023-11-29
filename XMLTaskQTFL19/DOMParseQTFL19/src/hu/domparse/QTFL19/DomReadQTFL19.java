@@ -18,7 +18,8 @@ public class DomReadQTFL19 {
     public static void main(String argv[]) throws SAXException, IOException, ParserConfigurationException {
         
         File xmlFile = new File("XMLQTFL19.xml");
-
+        
+        /* Dokumentum Builder létrekozása */
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = factory.newDocumentBuilder();
 
@@ -192,7 +193,7 @@ public class DomReadQTFL19 {
         /* Kártya egyed beolvasása */
         NodeList kaList = doc.getElementsByTagName("kartya");
         x = 1;
-        
+
         for (int i = 0; i < kaList.getLength(); i++) {
 
 			Node nNode = kaList.item(i);
