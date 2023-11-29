@@ -5,7 +5,7 @@
     <!-- könyvesbolt elemek -->
     <xs:element name="nev" type="xs:string"/>
     <xs:element name="email" type="emailType"/>
-    <xs:element name="telefon" type="xs:int"/>
+    <xs:element name="telefon" type="xs:integer"/>
     <xs:element name="kapacitas" type="kapType"/>
 
     <!-- könyv elemek -->
@@ -22,7 +22,7 @@
 
     <!-- kártya elemek -->
     <xs:element name="tipus" type="xs:string"/>
-    <xs:element name="akcio" type="xs:int"/>
+    <xs:element name="akcio" type="xs:integer"/>
     <xs:element name="igenyles" type="dateType"/>
 
     <!-- vétel kapcsolat eleme -->
@@ -90,6 +90,7 @@
                             <xs:element ref="iro"/>
                         </xs:sequence>
                         <xs:attribute name="K_ID" type="xs:string"/>
+                        <xs:attribute name="FK_bolt" type="xs:string"/>
                     </xs:complexType>
                 </xs:element>
 
@@ -102,6 +103,7 @@
                             <xs:element ref="hely"/>
                         </xs:sequence>
                         <xs:attribute name="Adoszam" type="xs:int"/>
+                        <xs:attribute name="FK_konyv" type="xs:string"/>
                     </xs:complexType>
                 </xs:element>
 
@@ -126,6 +128,7 @@
                             <xs:element ref="igenyles"/>
                         </xs:sequence>
                         <xs:attribute name="vonalkod" type="xs:int"/>
+                        <xs:attribute name="FK_vendeg" type="xs:string"/>
                     </xs:complexType>
                 </xs:element>
 
