@@ -35,7 +35,7 @@ public class DomModifyQTFL19 {
 				}
             }
 
-			/* 2. Könyv  */
+			/* 2. Kiadó ahol 10 karakternél rövidebb a hely hossza ott a hely mellé + (új hely szükséges)  */
 			NodeList kiNodeList = doc.getElementsByTagName("kiado");
 			for(int i=0; i<kiNodeList.getLength(); i++) {
 				Element kiNode = (Element) kiNodeList.item(i);
