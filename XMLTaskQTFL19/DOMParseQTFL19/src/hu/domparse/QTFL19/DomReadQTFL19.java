@@ -4,16 +4,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.PrintStream;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -26,8 +21,14 @@ public class DomReadQTFL19 {
     public static void main(String argv[]) throws SAXException, IOException, ParserConfigurationException {
         
 		try {
+			/* Új fájl */
+			File OutPutRead = new File("DomReadQTFL19.xml");
+			OutputStream os = new FileOutputStream(OutPutRead);
+			PrintStream ps = new PrintStream(os);
 
-		
+			/* A konzol kimenetének átirányítása az új fájlba */
+			System.setOut(ps);
+			
 			File xmlFile = new File("XMLQTFL19.xml");
 			
 			/* Dokumentum Builder létrekozása */
@@ -239,23 +240,12 @@ public class DomReadQTFL19 {
 			System.out.println("\n</" + doc.getDocumentElement().getNodeName() + ">");
 
 			
-			TransformerFactory tFactory = TransformerFactory.newInstance();
-            Transformer tformer = tFactory.newTransformer();
-            tformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            DOMSource source = new DOMSource(doc);
-            StreamResult consoleResult = new StreamResult(System.out);
-            tformer.transform(source, consoleResult); 
 
-            File OutPutFile = new File("DomReadQTFL19.xml");
-            OutputStream outputStream = new FileOutputStream(OutPutFile);
-            StreamResult fileResult = new StreamResult(outputStream);
-            tformer.transform(source, fileResult);
-            outputStream.close();
+			/* Új fájl bezárása */
+			ps.close();
 
     
-		}catch (ParserConfigurationException | IOException | TransformerException e) {
-            e.printStackTrace();
-        } catch (Exception e) {
+		}catch (Exception e) {
             e.printStackTrace();
         }
 	}
